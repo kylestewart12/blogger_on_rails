@@ -1,0 +1,1 @@
+A simple blog app made by following along with Jumpstart Lab's Blogger Tutorial: http://tutorials.jumpstartlab.com/projects/blogger.html.
