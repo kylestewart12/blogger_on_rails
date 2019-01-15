@@ -13,4 +13,6 @@ Rails.application.routes.draw do
 
   get "login" => "author_sessions#new"
   get "logout" => "author_sessions#destroy"
+  get "most_popular" => "articles#most_popular"
+  get "random_article" => "articles#random_article"
 end

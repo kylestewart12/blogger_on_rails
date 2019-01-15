@@ -25,6 +25,17 @@
           <%= link_to "(login)", login_path %>
         <% end %>
       </h6>
+      
     </div>
+    
   </body>
+  <div id="sidebar">
+    <ul>
+      <li><%= link_to "Articles", articles_path %></li>
+      <li><%= link_to "Tags", tags_path %></li>
+      <li><%= link_to "Authors", authors_path %></li>
+      <li><%= link_to "Most Popular", most_popular_path %></li>
+      <li><%= link_to "Random", random_article_path %></li>
+    </ul>
+  </div>
 </html>

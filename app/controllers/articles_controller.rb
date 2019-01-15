@@ -5,10 +5,11 @@ class ArticlesController < ApplicationController
     def index
         @articles = Article.all
     end
-
+    
     def show
         @article = Article.find(params[:id])
-
+        @article.increment_view_count
+        
         @comment = Comment.new
         @comment.article_id = @article.id
     end
@@ -48,5 +49,18 @@ class ArticlesController < ApplicationController
         redirect_to articles_path
     end
 
+    def most_popular
+        view_counts = Article.all.map(&:view_count)
+        most_pop = view_counts.max
+        @article = Article.find_by(view_count: most_pop)
+        redirect_to article_path(@article)
+    end
+    
+    def random_article
+        article_ids = Article.all.map(&:id)
+        random_id = article_ids.sample
+        @article = Article.find(random_id)
+        redirect_to article_path(@article)
+    end
     
 end

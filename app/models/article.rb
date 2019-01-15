@@ -14,4 +14,9 @@ class Article < ApplicationRecord
   def tag_list
     tags.join(", ")
   end
+
+  def increment_view_count
+    increment!(:view_count)
+  end
+
 end

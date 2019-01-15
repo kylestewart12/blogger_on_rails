@@ -43,3 +43,16 @@ th {
 td {
   padding: 2px 5px;
 }
+
+#sidebar {
+  height: 100%;
+  position: fixed;
+  left: 0;
+  top: 0;
+  padding-top: 5%;
+  background-color: #aaa;
+}
+
+#sidebar ul li {
+  color: blue;
+}
